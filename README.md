@@ -15,15 +15,13 @@ Projeto desenvolvido MVP(Minimum Viable Product) para resolução de um problema
 
 ## Stack utilizada
 
-- Servidor Tomcat
-- Servlet
-- Thymeleaf
+- Servlet- Thymeleaf
 - IDE Eclipse
 - Spring boot
 - Spring web
-- JDBC (Java Database Connectivity)
+- Spring data JPA
+- Spring MVC
 - MySQL CRUD
-- MVC (Model View Controller)
 - HTML e CSS
 
 ## Executando a aplicação
