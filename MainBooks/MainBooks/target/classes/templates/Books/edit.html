@@ -66,7 +66,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <form th:object="${requestNewBookDto}" action="/books" method="POST">
+            <form th:object="${requestNewBookDto}" th:action="@{/books/{bookId}(bookId = ${bookId})}" method="POST">
                 <div class="mb-3">
                     <label class="form-label">Nome do Autor</label>
                     <input class="form-control" th:errorclass="is-invalid" type="text" th:field="*{AuthorsName}">

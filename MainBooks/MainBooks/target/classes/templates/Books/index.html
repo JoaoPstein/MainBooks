@@ -27,7 +27,6 @@
 	        flex-direction: column;
 	        height: 100vh;
 	        color: #fff;
-	        text-align: center;
         }
 
         .button {
@@ -47,21 +46,21 @@
         }
 
         .deleteButton {
-            padding: 8px 20px;
+            padding: 5px 20px;
             background-color: #7f0907;
             margin-top: 20px;
             text-decoration: none;
             border-radius: 4px;
             transition: background-color 0.3s;
             color: black;
-            margin-right: -1.5rem;
+            margin-right: -0.5rem;
         }
         .deleteButton:hover {
             background-color: #e3172f;
         }
 
         .editButton {
-            padding: 8px 20px;
+            padding: 5px 20px;
             background-color: #0660cc;
             margin-top: 20px;
             text-decoration: none;
@@ -99,11 +98,12 @@
         <tr th:each="book : ${listBook}">
             <td class="col-1" th:text="${book.getId()}">ID</td>
             <td class="col-4" th:text="${book.bookCode}">Código do livro</td>
+            <td class="col-4" th:text="${book.authorsName}">Autor</td>
             <td class="col-2" th:text="${book.title}">Título</td>
             <td class="col-2" th:text="${book.ISBN}">ISBN</td>
             <td class="col-2" th:text="${book.publishingCompany}">Editora</td>
             <td class="col-2"><a class="editButton" th:href="@{/books/{bookId}/edit(bookId=${book.id})}">Editar</a></td>
-            <td class="col-2"><a class="deleteButton" th:href="@{/books/{bookId}/delete(bookId=${book.id})}">Deletar</a>
+            <td class="col-2"><a class="deleteButton" th:href="@{/books/{bookId}/delete(bookId=${bookId})}">Deletar</a>
             </td>
         </tr>
         </tbody>
